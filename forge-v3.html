@@ -190,6 +190,24 @@
     .sticky-arrow { font-size: 0.75rem; color: #000; transition: transform 0.15s; }
     .sticky:hover .sticky-arrow { transform: translateX(3px); }
 
+    @media (max-width: 599px) {
+      .logo { font-size: 4.5rem; }
+      .hero { padding: 0 24px 56px; }
+      .hero-horizon { left: 24px; right: 24px; }
+      .hero-headline { font-size: clamp(1.4rem, 7vw, 2.2rem); margin-bottom: 24px; }
+      .hero-label { font-size: 0.6rem; margin-bottom: 18px; }
+      .content { padding: 0 24px; }
+      .section { padding: 40px 0; }
+      .section-tag { font-size: 0.52rem; margin-bottom: 22px; }
+      .section-title { font-size: clamp(1.1rem, 5vw, 1.4rem); margin-bottom: 24px; }
+      .shift-body { gap: 18px; }
+      .shift-body p { font-size: 0.92rem; }
+      .why-desc { font-size: 0.72rem; }
+      .row-name { font-size: 0.82rem; }
+      .row-meta { font-size: 0.6rem; }
+      footer { padding: 56px 0 40px; }
+      .scroll-arrow { bottom: 20px; }
+    }
     @media (min-width: 600px) {
       .hero { padding: 0 56px 80px; }
       .hero-horizon { left: 56px; right: 56px; }
