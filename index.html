@@ -94,6 +94,8 @@
       position: absolute; top: 0; left: 0;
       width: 100%; height: 100%;
       z-index: 1; pointer-events: none;
+      mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
     }
     .hero-horizon {
       position: absolute; bottom: 0; left: 40px; right: 40px;
@@ -141,6 +143,7 @@
     .content { max-width: 680px; margin: 0 auto; padding: 0 40px; }
 
     .section { padding: 56px 0; border-bottom: 0.5px solid var(--rule); }
+    .section:first-child { padding-top: 80px; }
     .section-tag-center { display: none; }
 
     .section-tag {
@@ -175,8 +178,13 @@
     .why-title { font-size: 0.88rem; font-weight: 400; color: var(--cream); letter-spacing: 0.01em; margin-bottom: 10px; }
     .why-desc { font-size: 0.78rem; font-weight: 300; color: var(--cream2); line-height: 1.9; max-width: 420px; }
 
-    /* CARD GRID (desktop) */
-    .card { display: none; }
+    /* CARD GRID */
+    .row, .why { display: none; }
+    .card { display: block; background: rgba(232,228,219,0.04); border: 0.5px solid var(--rule); padding: 24px; text-align: center; }
+    .card-title { font-size: 0.95rem; font-weight: 400; color: var(--cream); margin-bottom: 10px; }
+    .card-meta { font-size: 0.65rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,228,219,0.5); margin-bottom: 6px; }
+    .card-desc { font-size: 0.78rem; font-weight: 300; color: var(--cream2); line-height: 1.9; }
+    .card-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
 
     /* FOOTER */
     footer { padding: 80px 0 48px; }
@@ -228,8 +236,8 @@
       .hero-headline { font-size: clamp(1.4rem, 7vw, 2.2rem); margin-bottom: 0; }
       .hero-label { font-size: 0.6rem; margin-bottom: 18px; }
       .content { padding: 0 24px; }
-      .section { padding: 40px 0; }
-      .section-tag { font-size: 0.52rem; margin-bottom: 22px; }
+      .section { padding: 40px 0; text-align: center; border-bottom: none; }
+      .section-tag { font-size: 0.52rem; margin-bottom: 22px; justify-content: center; }
       .section-title { font-size: clamp(1.1rem, 5vw, 1.4rem); margin-bottom: 24px; }
       .shift-body { gap: 18px; }
       .shift-body p { font-size: 0.92rem; }
@@ -258,13 +266,11 @@
         text-transform: uppercase; color: var(--cream2); margin-bottom: 28px; }
       .section-tag-center::before { content: ''; display: block; width: 14px; height: 0.5px; background: var(--cream2); }
 
-      /* Hide mobile list views, show card grids */
-      .row, .why, .row:first-of-type { display: none; }
-      .card { display: block; background: rgba(232,228,219,0.04); border: 0.5px solid var(--rule); padding: 32px; text-align: center; }
-      .card-title { font-size: 1.05rem; font-weight: 400; color: var(--cream); margin-bottom: 12px; }
-      .card-meta { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,228,219,0.5); margin-bottom: 8px; }
-      .card-desc { font-size: 0.9rem; font-weight: 300; color: var(--cream2); line-height: 1.9; }
-      .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 720px; margin: 0 auto; }
+      .card { padding: 32px; }
+      .card-title { font-size: 1.05rem; margin-bottom: 12px; }
+      .card-meta { font-size: 0.75rem; margin-bottom: 8px; }
+      .card-desc { font-size: 0.9rem; }
+      .card-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 720px; margin: 0 auto; }
       .scroll-arrow { right: 72px; }
     }
 
