@@ -123,7 +123,7 @@
       position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 4;
       width: 36px; height: 36px;
       display: flex; align-items: center; justify-content: center;
-      color: rgba(232,228,219,0.5); font-size: 0.85rem;
+      color: var(--cream); font-size: 0.85rem;
       transition: color 0.2s;
       animation: arrowBob 2.5s ease-in-out infinite;
     }
@@ -138,7 +138,7 @@
     }
 
     /* CONTENT */
-    .content { max-width: 580px; margin: 0 auto; padding: 0 40px; }
+    .content { max-width: 680px; margin: 0 auto; padding: 0 40px; }
 
     .section { padding: 56px 0; border-bottom: 0.5px solid var(--rule); }
     .section-tag-center { display: none; }
@@ -181,7 +181,7 @@
     /* FOOTER */
     footer { padding: 80px 0 48px; }
     .footer-logo { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream); margin-bottom: 24px; }
-    .footer-meta { font-size: 0.65rem; font-weight: 300; color: var(--cream2); line-height: 2.2; letter-spacing: 0.04em; }
+    .footer-meta { font-size: 0.65rem; font-weight: 300; color: var(--cream2); line-height: 2.2; letter-spacing: 0.04em; text-align: center; }
 
     /* MODAL */
     .modal-overlay {
@@ -320,7 +320,7 @@
       font-weight: 400;
       color: rgba(232,228,219,0.75);
       line-height: 1.9;
-      max-width: 480px;
+      max-width: 600px;
     }
     .shift-closer {
       font-size: 1.1rem !important;
@@ -440,6 +440,7 @@
     var email = form.email.value;
     window.location.href = 'mailto:hello@basd.sh?subject=Consultation — ' + encodeURIComponent(name) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email);
     form.style.display = 'none';
+    form.previousElementSibling.style.display = 'none';
     document.getElementById('contactSuccess').style.display = 'block';
     return false;
   }
